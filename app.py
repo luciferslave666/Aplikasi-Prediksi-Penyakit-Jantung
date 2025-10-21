@@ -22,7 +22,7 @@ st.sidebar.header("Masukkan Data Pasien:")
 def user_input_features():
     # Buat slider dan input box
     # (age) Usia
-    age = st.sidebar.slider('Usia', 29, 77, 50) # min, max, default
+    age = st.sidebar.slider('Usia', 20, 70, 50) # min, max, default
     
     # (sex) Jenis Kelamin (1 = Pria, 0 = Wanita)
     sex = st.sidebar.selectbox('Jenis Kelamin', ('Pria', 'Wanita'))
@@ -108,4 +108,5 @@ if st.sidebar.button('Prediksi Risiko'):
         st.success(f"**BERISIKO RENDAH** terkena penyakit jantung.")
         st.write(f"Probabilitas: {prediction_proba[0][0] * 100:.2f}%")
 else:
+
     st.info("Klik tombol 'Prediksi Risiko' di sidebar untuk melihat hasilnya.")
